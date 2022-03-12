@@ -1,0 +1,235 @@
+.qHeader {
+  display: flex;
+  align-items: center;
+  background-color: #ffd700;
+  position: sticky;
+  z-index: 1000;
+  top: 0px;
+  /* box-shadow: 0px 5px 8px -9px rgba(0, 0, 0, 0.5); */
+  box-shadow: 2px 3px 6px white;
+  justify-content: center;
+  padding: 1px;
+}
+
+.qHeader-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* padding: 5px; */
+}
+
+.qHeader_logo > img {
+  height: 70px;
+  object-fit: contain;
+}
+
+.qHeader_icons {
+  display: flex;
+}
+
+.qHeader_icon {
+  padding: 30px;
+  font-size: 1.5em;
+  cursor: pointer;
+  padding: 20px 20px;
+}
+
+.qHeader_icon:hover {
+  background-color: white;
+  border-radius: 200px;
+}
+
+.qHeader_icon > .MuiSvgIcon-root {
+  color: black;
+  font-size: xx-large;
+  margin-left: 65px;
+  margin-right: 65px;
+}
+
+.qHeader_icon:hover > .MuiSvgIcon-root {
+  color: #000;
+}
+
+/* .qHeader__icons {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+      }
+      .qHeader__icons > .active > .MuiSvgIcon-root {
+        color: #8f1f1b;
+      }
+      .qHeader__icon > .MuiSvgIcon-root {
+        font-size: xx-large;
+        padding: 5px 20px;
+        color: gray;
+      }
+      .qHeader__icon > .MuiSvgIcon-root:hover {
+        background-color: rgba(233, 233, 233, 0.5);
+        border-radius: 10px;
+        color: #b92b27;
+      } */
+
+.qHeader_input {
+  display: flex;
+  align-items: center;
+  border: 1px solid black;
+  padding: 5px;
+  border-radius: 5px;
+  margin-left: 5px;
+}
+
+.qHeader_input > input {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  color: black;
+}
+
+.qHeader_input > .MuiSvgIcon-root {
+  color: black;
+}
+
+/* .qHeader__avatar {
+      cursor: pointer;
+    } */
+.qHeader_Rem {
+  display: flex;
+  align-items: center;
+  margin-left: 25px;
+}
+
+.qHeader_Rem > .MuiSvgIcon-root {
+  font-size: xx-large;
+  color: black;
+  margin-left: 25px;
+  cursor: pointer;
+}
+.qHeader_Rem > .MuiSvgIcon-root:hover {
+  color: #000;
+}
+
+.qHeader_Rem > .MuiButton-root {
+  color: white;
+  background: #222;
+  text-transform: inherit;
+  border-radius: 5px;
+  margin-left: 25px;
+}
+
+.qHeader_Rem > .MuiButton-root:hover {
+  color: #222;
+  background: rgb(214, 214, 214);
+}
+
+.modal_title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+  border-bottom: 1px solid rgba(187, 187, 187, 0.5);
+}
+
+.modal_title > h5 {
+  color: gray;
+  font-size: 20px;
+  cursor: pointer;
+  font-weight: 500;
+  margin-right: 30px;
+}
+
+.modal_title > h5:hover {
+  color: #b92b27;
+}
+
+.modal_info {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.modal_info > p {
+  margin-left: 10px;
+  font-size: small;
+  color: gray;
+}
+
+.modal_info > .modal__scope {
+  display: flex;
+  align-items: center;
+  color: rgb(98, 98, 98);
+  padding: 5px;
+  margin-left: 10px;
+  background-color: rgb(230, 230, 230);
+  border-radius: 33px;
+  cursor: pointer;
+}
+
+.modal_Field {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+  flex: 1;
+}
+
+.modal_Field > .modal__fieldLink {
+  color: gray;
+  display: flex;
+  margin-top: 10px;
+  align-items: center;
+}
+
+.modal_Field > .modal__fieldLink > input {
+  flex: 1;
+  border: none;
+  outline: none;
+  margin-left: 5px;
+}
+
+.modal_buttons {
+  display: flex;
+  flex-direction: column-reverse;
+  margin-top: 10px;
+  align-items: center;
+}
+
+.modal_buttons > .cancle {
+  margin-top: 10px;
+  border: none;
+  outline: none;
+  color: black;
+  font-weight: 500;
+  padding: 10px;
+  border-radius: 33px;
+  cursor: pointer;
+}
+
+.modal_buttons > .cancle:hover {
+  color: red;
+}
+
+.modal_buttons > .add {
+  border: none;
+  outline: none;
+  margin-top: 10px;
+  background-color: #222;
+  color: white;
+  font-weight: 700;
+  padding: 10px;
+  border-radius: 33px;
+  cursor: pointer;
+  width: 50%;
+}
+
+.modal_buttons > .add:hover {
+  background-color: #eee;
+  color: #222;
+}
+
+@media only screen and (max-width: 600px) {
+  .qHeader_icons {
+    display: none;
+  }
+
+  .qHeader_input {
+    display: none;
+  }
+}
