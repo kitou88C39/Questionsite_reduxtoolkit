@@ -3,17 +3,15 @@ import "./Login.css";
 import { auth, provider } from "../../firebase";
 
 const Login = () => {
-  // eslint-disable-next-line
   const [email, setEmail] = useState("");
-  // eslint-disable-next-line
   const [password, setPassword] = useState("");
-  // eslint-disable-next-line
+
   const signIn = () => {
     auth.signInWithPopup(provider).catch((e) => {
       alert(e.message);
     });
   };
-  // eslint-disable-next-line
+
   const handleSignIn = (e) => {
     e.preventDefault();
 
@@ -24,7 +22,7 @@ const Login = () => {
       })
       .catch((e) => alert(e.message));
   };
-  // eslint-disable-next-line
+
   const registerSignIn = (e) => {
     e.preventDefault();
     auth
@@ -64,17 +62,61 @@ const Login = () => {
             </div>
             <div className="login_authOption">
               <img
-                className="login__googleAuth"
+                className="login_googleAuth"
                 src="https://1000logos.net/wp-content/uploads/2016/11/Facebook-logo-500x350.png"
                 alt=""
               />
               <span>Continue With Facebook</span>
             </div>
+            <div className="login_authDesc">
+              <p>
+                <span style={{ color: "blue", cursor: "pointer" }}>
+                  Sign Up With Email
+                </span>
+                . By continuing you indicate that you have read and agree to
+                Dogaben's
+                <span style={{ color: "blue", cursor: "pointer" }}>
+                  Terms of Service{" "}
+                </span>
+                and{" "}
+                <span style={{ color: "blue", cursor: "pointer" }}>
+                  Privacy Policy
+                </span>
+                .
+              </p>
+            </div>
+          </div>
+          <div className="login_emailPass">
+            <div className="login_label">
+              <h4>Login</h4>
+            </div>
+            <div className="login_inputFields">
+              <div className="login_inputField">
+                <input
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  type="text"
+                  placeholder="Email"
+                />
+              </div>
+              <div className="login_inputField">
+                <input
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  type="password"
+                  placeholder="Password"
+                />
+              </div>
+            </div>
+            <div className="login_forgButt">
+              <small>Forgot Password?</small>
+              <button onClick={handleSignIn}>Login</button>
+            </div>
+            <button onClick={registerSignIn}>Register</button>
           </div>
         </div>
       </div>
     </div>
   );
 };
-
 export default Login;
